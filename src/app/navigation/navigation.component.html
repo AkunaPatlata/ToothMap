@@ -1,0 +1,38 @@
+<mat-toolbar
+  class="navbar"
+  color="primary"
+  [ngClass]="{ 'home-toolbar': isHomePage, 'other-page-toolbar': !isHomePage }"
+>
+  <mat-toolbar-row
+    fxLayout="row"
+    fxLayoutAlign="space-around center"
+    class="navbar"
+  >
+    <span>
+      <a href="#">
+        <img class="logo" src="./../../assets/tooth-logo.png" alt="logo" />
+      </a>
+    </span>
+    <span class="example-spacer"></span>
+    <span><a routerLink="/about" class="links" fxHide.xs>Про нас</a></span>
+    <span><a routerLink="/cabinet" class="links" fxHide.xs>Пацієнти</a></span>
+
+    <div class="small-icons">
+      <span
+        ><a routerLink="/" class="links-small" fxShow.xs fxHide
+          ><mat-icon>home</mat-icon></a
+        ></span
+      >
+      <span
+        ><a routerLink="/about" class="links-small" fxShow.xs fxHide
+          ><mat-icon>person-pin</mat-icon></a
+        ></span
+      >
+      <span
+        ><a routerLink="/cabinet" class="links-small" fxShow.xs fxHide
+          ><mat-icon>edit</mat-icon></a
+        ></span
+      >
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-size: 150% 150%;
+  background-repeat: no-repeat;
+  padding-top: 15px;
+  background-position: center 0px;
+  position: fixed;
+  bottom: 100px;
+  right: 75px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid red;
+  cursor: pointer;
+  background-image: url("../../assets/стоматологиня.jpg");
+}
+
+.mic {
+  color: rgb(17, 14, 14);
+  font-size: 24px;
+}
+
+@media (max-width: 1020px) {
+  .main {
+    right: 50px;
+    height: 50px;
+    width: 50px;
+  }
+  .mic {
+    font-size: 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}

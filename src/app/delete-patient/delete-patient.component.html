@@ -1,0 +1,17 @@
+<div class="position close-window" (click)="cancel()"></div>
+
+<div class="confirmation-box position">
+  <h1 class="heading">Підтвердження видалення</h1>
+  <p>Ви впевнені, що хочете видалити цього пацієнта?</p>
+  <div class="buttons" fxLayout="row" fxLayoutAlign="center center">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="confirm()"
+      class="color-confirm"
+    >
+      Так
+    </button>
+    <button mat-raised-button color="warn" (click)="cancel()">Ні</button>
+  </div>
+</div>

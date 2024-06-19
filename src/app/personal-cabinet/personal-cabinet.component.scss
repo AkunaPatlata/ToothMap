@@ -1,0 +1,51 @@
+@import "../base.colors.scss";
+$bg-opacity: 1;
+$text-opacity: 1;
+
+.personal-card {
+  width: 90%;
+}
+
+.photo {
+  margin-left: 2px;
+  margin-right: 20px;
+  height: 85px;
+}
+
+img {
+  height: 97%;
+  margin-top: 1%;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.content {
+  margin-top: 20px;
+  max-height: 90px;
+}
+
+.personal-card {
+  border: 2px solid $yellow-base;
+  border-radius: 10px;
+}
+
+.phone {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-blue-base;
+}
+
+.button-add {
+  position: fixed;
+  right: 20px;
+  bottom: 112px;
+  background-color: $blue-base;
+  z-index: 999;
+}
+
+.delete-button {
+  right: 0;
+}

@@ -1,0 +1,30 @@
+<form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="base-input">
+    <mat-label>Ім'я та прізвище</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+  <mat-form-field class="base-input">
+    <mat-label>Телефон</mat-label>
+    <span matPrefix>+38 &nbsp;</span>
+    <input
+      type="tel"
+      matInput
+      formControlName="phone"
+      placeholder="096-000-000-0"
+    />
+  </mat-form-field>
+  <mat-form-field class="base-input">
+    <mat-label>Місто</mat-label>
+    <input matInput formControlName="city" />
+  </mat-form-field>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!isFormValid"
+      class="create-button"
+    >
+      Створити
+    </button>
+  </div>
+</form>

@@ -1,0 +1,68 @@
+@import "../base.colors.scss";
+
+.home-toolbar {
+  background: transparent;
+  color: white;
+  position: absolute;
+}
+
+.other-page-toolbar {
+  background: $blue-base;
+}
+
+.navbar {
+  padding: 10px;
+  z-index: 100;
+}
+
+.links {
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+.links::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: $yellow-base;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.links:hover::after {
+  width: 100%;
+}
+
+.small-icons {
+  margin-right: -1rem;
+}
+
+.links-small {
+  margin-right: 0.8rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h1 {
+  margin: 0;
+}
+
+.nav-header {
+  right: 0;
+  left: 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  height: 40px;
+  cursor: pointer;
+  padding-left: 10px;
+}

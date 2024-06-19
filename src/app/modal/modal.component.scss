@@ -1,0 +1,42 @@
+.position {
+  z-index: 999;
+}
+
+.close-window {
+  background-color: rgb(0 0 0 / 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.create-box {
+  width: 33.333333%;
+  position: absolute;
+  top: 4rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 1);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  border-radius: 0.25rem;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (max-width: 870px) {
+  .create-box {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .create-box {
+    width: 70%;
+  }
+}

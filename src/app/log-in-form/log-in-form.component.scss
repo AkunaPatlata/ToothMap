@@ -1,0 +1,72 @@
+@import "../base.colors.scss";
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+  justify-content: center;
+  margin-top: 10svh;
+}
+
+.header {
+  color: $dark-blue-base;
+}
+
+.login-form {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.main-box {
+  width: 30%;
+  border: 2px solid $yellow-base;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.unregistered {
+  margin-right: 15px;
+  color: $dark-blue-base;
+}
+
+.submit {
+  background-color: $yellow-base !important;
+  margin-bottom: 20px;
+}
+
+.register-link {
+  text-decoration: none;
+  color: $blue-base;
+  position: relative;
+}
+
+.register-link:hover::after {
+  width: 100%;
+}
+
+.register-link::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  background: $blue-base;
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  transition: 0.5s;
+}
+
+@media (max-width: 860px) {
+  .main-box {
+    width: 60%;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-box {
+    width: 80%;
+  }
+}

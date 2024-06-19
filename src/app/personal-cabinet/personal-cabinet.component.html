@@ -1,0 +1,82 @@
+<div class="content" fxLayoutAlign="center" *ngIf="showDefaultPatient">
+  <div
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    class="personal-card"
+  >
+    <a
+      [routerLink]="['/mouth', defaultPatient.id]"
+      fxLayout="row"
+      fxLayoutAlign="start center"
+    >
+      <div class="photo"><img [src]="defaultPatient.photoUrl" alt="" /></div>
+      <div fxLayout="column" fxLayoutAlign="center start">
+        <p>{{ defaultPatient.name }}</p>
+        <p>{{ defaultPatient.city }}</p>
+        <p class="phone">{{ defaultPatient.phone }}</p>
+      </div>
+    </a>
+    <button
+      class="delete-button"
+      mat-icon-button
+      aria-label="Delete patient"
+      (click)="confirmDeleteDefaultPatient()"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div *ngFor="let patient of patients; let i = index">
+  <div class="content" fxLayoutAlign="center">
+    <div
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      class="personal-card"
+    >
+      <a
+        [routerLink]="['/mouth', patient.id]"
+        fxLayout="row"
+        fxLayoutAlign="start center"
+      >
+        <div class="photo">
+          <img [src]="patient.photoUrl" alt="" />
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center start">
+          <p>{{ patient.name }}</p>
+          <p>{{ patient.city }}</p>
+          <p class="phone">{{ patient.phone }}</p>
+        </div>
+      </a>
+      <button
+        class="delete-button"
+        mat-icon-button
+        aria-label="Delete patient"
+        (click)="openDeleteModal(i, $event)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-modal *ngIf="modalService.isVisible$ | async">
+  <app-create-patient (formSubmit)="addPatient($event)"></app-create-patient>
+</app-modal>
+
+<app-delete-patient
+  *ngIf="deleteModalService.isVisible$ | async"
+></app-delete-patient>
+
+<div *ngIf="modalService.buttonIsVisible$ | async">
+  <button
+    mat-fab
+    matTooltip="Primary"
+    color="primary"
+    aria-label="Example fab with a plus icon"
+    (click)="modalService.open()"
+    class="button-add"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
